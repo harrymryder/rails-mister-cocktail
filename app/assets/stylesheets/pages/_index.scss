@@ -1,2 +1,33 @@
-// Import page-specific CSS files here.
-@import "home";
+.banner {
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-family: $special-font;
+    font-size: 50px;
+    color: #DCDCDC;
+  }
+}
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+.cocktail-card {
+  height: 200px;
+  margin: 20px;
+  border: 1px solid #DCDCDC;
+  padding: 20px;
+  text-align: center;
+  p {
+    color: #553FFB;
+    text-decoration: none;
+  }
+  .link {
+    text-decoration: none !important;
+  }
+}
+
+

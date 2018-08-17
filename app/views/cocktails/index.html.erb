@@ -1,5 +1,21 @@
-<%= link_to "Add a cocktail", new_cocktail_path %>
+<div class="banner" style="background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%), url('https://vignette.wikia.nocookie.net/reddwarf/images/6/69/Ainsley_Harriott.jpg/revision/latest?cb=20180223100130')">
+  <h1>Ainsley's Concoctions</h1>
+  <p><%= link_to "Add one of your own 'concoctions'", new_cocktail_path %></p>
+</div>
 
-<% @cocktails.each do |cocktail| %>
-  <p> <%= link_to cocktail.name, cocktail_path(cocktail) %> </p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-md-6">
+        <div data-aos="zoom-in">
+          <div class="cocktail-card">
+            <p> <%= link_to cocktail.name, cocktail_path(cocktail), class: "link" %> </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+

@@ -1,9 +1,33 @@
+<%= link_to "Back to all cocktails", cocktails_path %>
+
 <h1><%= @cocktail.name %></h1>
 
+<%= link_to "Delete",  cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+
 <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
+
 
 <h3>Doses:</h3>
 <% @cocktail.doses.each do |dose| %>
   <p><%= dose.description %> <%= dose.ingredient.name %></p>
   <p><%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<% end %>
+
+<h3>Add an ingredient</h3>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit %>
+<% end %>
+
+<h3>Reviews:</h3>
+<% @cocktail.reviews.each do |review| %>
+  <%= review.rating %> <%= review.content %>
+<% end %>
+
+<h3>Write a review</h3>
+<%= simple_form_for [@cocktail, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating, collection: [1, 2, 3, 4, 5] %>
+  <%= f.submit %>
 <% end %>

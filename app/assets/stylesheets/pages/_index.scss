@@ -5,29 +5,28 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 100px;
   h1 {
     font-family: $special-font;
     font-size: 50px;
-    color: #DCDCDC;
+    color: #F4F4F4;
+  }
+  p {
+  text-decoration: none !important;
+  color: #F4F4F4;
+  }
+  p:hover {
+    text-decoration: none !important;
+    color: #F4F4F4;
   }
 }
 .container {
   width: 900px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
-.cocktail-card {
-  height: 200px;
-  margin: 20px;
-  border: 1px solid #DCDCDC;
-  padding: 20px;
-  text-align: center;
-  p {
-    color: #553FFB;
-    text-decoration: none;
-  }
-  .link {
-    text-decoration: none !important;
-  }
+.cards {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
-
-

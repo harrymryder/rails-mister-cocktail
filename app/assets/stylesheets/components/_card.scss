@@ -1,0 +1,27 @@
+.cocktail-card {
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 500px;
+  min-height: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  p {
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: $special-font;
+    color: #F4F4F4;
+    font-size: 30px;
+  }
+  .card-link {
+    text-decoration: none !important;
+    color: #F4F4F4;
+  }
+  .card-link:hover {
+    text-decoration: none !important;
+    color: #F4F4F4;
+  }
+}

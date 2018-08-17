@@ -1,21 +1,18 @@
 <div class="banner" style="background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%), url('https://vignette.wikia.nocookie.net/reddwarf/images/6/69/Ainsley_Harriott.jpg/revision/latest?cb=20180223100130')">
   <h1>Ainsley's Concoctions</h1>
-  <p><%= link_to "Add one of your own 'concoctions'", new_cocktail_path %></p>
 </div>
 
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-md-6">
+      <div class="col-md-6 col-xs-12">
         <div data-aos="zoom-in">
-          <div class="cocktail-card">
-            <p> <%= link_to cocktail.name, cocktail_path(cocktail), class: "link" %> </p>
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+            <p><%= link_to cocktail.name, cocktail_path(cocktail), class: "card-link" %> </p>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-
-
